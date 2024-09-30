@@ -22,7 +22,7 @@ func main() {
 	password := os.Getenv("password")
 
 	to := []string{
-		"oikshut1@gmail.com",
+		"kakkar.nitesh04@gmail.com",
 	}
 
 	smtpHost := "smtp.gmail.com"

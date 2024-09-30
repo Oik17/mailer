@@ -1,8 +1,116 @@
 <!-- template.html -->
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Template</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f7fc;
+            margin: 20px;
+            color: #333;
+        }
+
+        .container {
+            background-color: #fff;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .container:hover {
+            transform: scale(1.03);
+        }
+
+        h3 {
+            font-size: 20px;
+            color: #007BFF;
+            margin-bottom: 5px;
+        }
+
+        span {
+            font-size: 18px;
+            font-weight: 300;
+            color: #555;
+        }
+
+        .divider {
+            margin: 20px 0;
+            border: none;
+            border-top: 1px solid #ddd;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+
+            h3 {
+                font-size: 18px;
+            }
+
+            span {
+                font-size: 16px;
+            }
+        }
+
+        .highlight {
+            background-color: #f9f9f9;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .highlight:hover {
+            background-color: #e9f5ff;
+        }
+
+        .footer {
+            text-align: center;
+            font-size: 14px;
+            color: #aaa;
+            margin-top: 20px;
+        }
+
+        .footer a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
 <body>
-    <h3>Name:</h3><span>{{.Name}}</span><br/><br/>
-    <h3>Email:</h3><span>{{.Message}}</span><br/>
+
+    <div class="container">
+        <h3>Name:</h3>
+        <div class="highlight">
+            <span>{{.Name}}</span>
+        </div>
+        <hr class="divider" />
+
+        <h3>Email:</h3>
+        <div class="highlight">
+            <span>{{.Message}}</span>
+        </div>
+
+        <div class="footer">
+            <p>Sent with ♥ by <a href="https://github.com/Oik17" target="_blank">Akshat Gupta</a></p>
+        </div>
+    </div>
+
 </body>
 </html>
