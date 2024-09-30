@@ -18,7 +18,7 @@ func main() {
 		return
 	}
 
-	from := "oikshut@gmail.com"
+	from := os.Getenv("email")
 	password := os.Getenv("password")
 
 	to := []string{
@@ -41,7 +41,7 @@ func main() {
 		Name    string
 		Message string
 	}{
-		Name:    "Puneet Singh",
+		Name:    "Akshat Gupta",
 		Message: "This is a test message in a HTML template",
 	})
 
